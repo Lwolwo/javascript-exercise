@@ -5,7 +5,7 @@ function chooseMultiplesOfThree(collection) {
 
 function chooseNoRepeatNumber(collection) {
   // TODO 2: 在这里写实现代码
-  return collection.filter(item => collection.lastIndexOf(item) === collection.indexOf(item));
+  return collection.filter((item, index, self) => self.indexOf(item) === index);
 }
 
 export { chooseMultiplesOfThree, chooseNoRepeatNumber };
